@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="56dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="56dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="settings_title,internet,wifi,nfc,volume,bubble_title,bubble,dark_title,dark"
+        app:flow_verticalGap="16dp"
+        app:flow_verticalStyle="packed"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+    <TextView
+        android:id="@+id/settings_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Settings panel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <Button
+        android:id="@+id/internet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Internet connectivity" />
+
+    <Button
+        android:id="@+id/wifi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Wifi" />
+
+    <Button
+        android:id="@+id/nfc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NFC" />
+
+    <Button
+        android:id="@+id/volume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Volume" />
+
+    <TextView
+        android:id="@+id/bubble_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bubbles"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <Button
+        android:id="@+id/bubble"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Show a bubble" />
+
+    <TextView
+        android:id="@+id/dark_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dark Mode"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <Switch
+        android:id="@+id/dark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Switch to dark mode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
